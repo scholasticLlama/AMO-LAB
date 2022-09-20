@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.labs.labwork3.Controller">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu fx:id="infoMenu" mnemonicParsing="false" text="Info">
+            <items>
+              <MenuItem fx:id="mainInfoMenu" mnemonicParsing="false" onAction="#onMainInfoMenuAction" text="MainInfo" />
+            </items>
+          </Menu>
+          <Menu fx:id="taskMenu" mnemonicParsing="false" text="Task">
+            <items>
+                  <MenuItem fx:id="algorithm" mnemonicParsing="false" onAction="#onAlgorithmAction" text="Newton's method" />
+              <MenuItem fx:id="interpolateMenu" mnemonicParsing="false" onAction="#onInterpolateMenuAction" text="Interpolate" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane fx:id="anchorPane" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Pane fx:id="infoPane" prefHeight="200.0" prefWidth="350.0">
+               <children>
+                  <Label fx:id="textLabel" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="2.0" layoutX="30.0" layoutY="-10.0" prefHeight="220.0" prefWidth="290.0" text="Лабораторна робота_3&#10;з дисципліни Алгоритми та методи обчислень&#10;Виконала студентка групи ІО-02&#10;Кожемяко Ярослава Романівна&#10;Номер залікової книжки: 0215&#10;Варіант: 15" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Consolas" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="taskPane" layoutY="7.0" prefHeight="200.0" prefWidth="350.0" visible="false">
+               <children>
+                  <Label layoutX="33.0" layoutY="14.0" text="Interpolation of the function by Newton's method">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="functionsBox" layoutX="155.0" layoutY="45.0" prefHeight="25.0" prefWidth="169.0" />
+                  <Label layoutX="23.0" layoutY="49.0" text="Choose the function" />
+                  <Label layoutX="23.0" layoutY="92.0" text="Set bounds of segment " />
+                  <TextField fx:id="minBounds" layoutX="155.0" layoutY="88.0" prefHeight="25.0" prefWidth="80.0" promptText="from" />
+                  <TextField fx:id="maxBounds" layoutX="244.0" layoutY="88.0" prefHeight="25.0" prefWidth="80.0" promptText="to" />
+                  <Button fx:id="buildButton" layoutX="34.0" layoutY="141.0" mnemonicParsing="false" onAction="#onBuildButtonAction" text="Build the funtion" />
+                  <Button fx:id="analysisErrorButton" layoutX="213.0" layoutY="141.0" mnemonicParsing="false" onAction="#onAnalysisButtonAction" prefHeight="25.0" prefWidth="104.0" text="Error analysis" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

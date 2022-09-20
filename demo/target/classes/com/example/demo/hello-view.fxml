@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
+   <children>
+      <Pane fx:id="pane" layoutX="31.0" layoutY="49.0" onMouseClicked="#onHelloButtonClick" prefHeight="200.0" prefWidth="417.0">
+         <children>
+            <Label fx:id="arrayLabel" layoutX="14.0" layoutY="55.0" text="Array" />
+            <TextField fx:id="arrayInString" layoutX="67.0" layoutY="50.0" prefHeight="26.0" prefWidth="254.0" />
+            <Button layoutX="16.0" layoutY="100.0" mnemonicParsing="false" text="Button" />
+            <ImageView fitHeight="34.0" fitWidth="41.0" layoutX="332.0" layoutY="46.0" onMouseClicked="#onTaskMenuClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="https://cdn1.iconfinder.com/data/icons/arrows-vol-1-4/24/download_1-512.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
